@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>SOLUCIONES INTEGRALES A LA PROPIEDAD S.A.S</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* Pantalla de bienvenida */
+    #bienvenida {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: url('operarios-2.jpeg') no-repeat center center;
+      background-size: cover;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 2000;
+      color: white;
+      text-align: center;
+    }
+    .contenido-bienvenida h1 {
+      font-size: 2em;
+      margin-bottom: 20px;
+      text-shadow: 2px 2px 5px rgba(0,0,0,0.7);
+    }
+    .contenido-bienvenida button {
+      padding: 12px 25px;
+      font-size: 1.2em;
+      background: #d62828;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+    .contenido-bienvenida button:hover {
+      background: #a61c1c;
+    }
+
+    /* Contenido oculto al inicio */
+    #contenido {
+      display: none;
+      opacity: 0;
+      transform: translateY(50px);
+      transition: opacity 1s ease, transform 1s ease;
+    }
+    #contenido.mostrar {
+      display: block;
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Galerías y títulos */
+    .titulo-seccion {
+      text-align: center;
+      font-size: 2em;
+      margin: 30px 0 20px 0;
+      font-family: 'Times New Roman', serif;
+      color: #0b1a40;
+    }
+    .contenedor-video {
+      display: flex;
+      justify-content: center;
+      margin: 20px auto;
+    }
+    .contenedor-video video {
+      max-width: 900px;
+      width: 100%;
+      border-radius: 12px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+    }
+    .galeria {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin: 30px auto;
+      max-width: 1000px;
+    }
+    .galeria img {
+      width: 30%;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Pantalla de bienvenida -->
+  <div id="bienvenida">
+    <div class="contenido-bienvenida">
+      <h1>Bienvenido a la página web de<br>SOLUCIONES INTEGRALES A LA PROPIEDAD S.A.S</h1>
+      <button id="btnMenu">Ir al menú</button>
+    </div>
+  </div>
+
+  <!-- Contenido principal -->
+  <div id="contenido">
+    <header>
+      <div class="logo-titulo">
+        <img src="logo.png" alt="Logo SOINTPRO S.A.S">
+        <h1>SOLUCIONES INTEGRALES A LA PROPIEDAD S.A.S</h1>
+      </div>
+      <nav>
+        <a href="#" onclick="openModal('inicioModal')">Inicio</a>
+        <a href="#" onclick="openModal('serviciosModal')">Servicios</a>
+        <a href="#" onclick="openModal('misionModal')">Misión y Visión</a>
+        <a href="#" onclick="openModal('historiaModal')">Reseña Histórica</a>
+        <a href="#" onclick="openModal('recursosModal')">Recursos Humanos</a>
+        <a href="#" onclick="openModal('valorModal')">Valor Agregado</a>
+        <a href="#" onclick="openModal('adicionalesModal')">Servicios Adicionales</a>
+        <a href="#" onclick="openModal('contactoModal')">Contacto</a>
+      </nav>
+    </header>
+
+    <!-- Modales con texto completo -->
+<div id="inicioModal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('inicioModal')">&times;</span>
+    <h2>Bienvenidos</h2>
+    <p>
+      SOLUCIONES INTEGRALES A LA PROPIEDAD S.A.S consiste en prestar el servicio de aseo,
+      jardinería, mantenimiento de piscinas, entre otros. Dotando desde el operario en adelante
+      que cuente con la maquinaria y la dotación personal e insumos necesarios para ejecutar a
+      cabalidad dichos servicios. Contamos con tecnologías de punta aplicadas para la limpieza,
+      desinfección, protección y mantenimiento en las áreas industrial, institucional,
+      comercial y residencial.
+    </p>
+  </div>
+</div>
+
+<div id="serviciosModal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('serviciosModal')">&times;</span>
+    <h2>Nuestros Servicios</h2>
+    <p>Aseo hospitalario en las mismas condiciones que en SOLUCIONES INTEGRALES A LA PROPIEDAD S.A.S, aportando toda la experiencia en mano de obra y técnicas en áreas hospitalarias.</p>
+    <p><strong>Tratamientos de pisos:</strong> brillado, cristalizado, diamantado, hidrolavado, sellado, técnica oxabril, lavado y encerado.</p>
+    <p><strong>Operativos especiales:</strong> limpieza de fachadas y superficies exteriores.</p>
+    <p><strong>Mantenimiento de zonas verdes y jardinería:</strong> corte de prados y singlas, recolección de desechos vegetales.</p>
+    <p><strong>Mantenimiento de piscinas:</strong> limpieza y mantenimiento en unidades residenciales y deportivas.</p>
+  </div>
+</div>
+
+<div id="misionModal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('misionModal')">&times;</span>
+    <h2>Misión</h2>
+    <p>
+      Ofrecer productos y servicios de aseo, cafetería y limpieza general; a nivel institucional,
+      comercial, hospitalario y residencial. Mediante nuestro trabajo en equipo y compromiso de
+      nuestro personal, prestamos servicios de alta calidad para que nuestros clientes reciban un
+      óptimo beneficio, buscando la protección del medio ambiente, el progreso de nuestro personal
+      y contribuyendo al desarrollo social y económico de nuestro país.
+    </p>
+    <h2>Visión</h2>
+    <p>
+      Para el año 2030 ser la empresa número uno en la prestación del servicio en el país,
+      compitiendo con calidad y credibilidad. Ser reconocida a nivel nacional como la mejor
+      empresa prestadora de servicio de aseo, garantizando a nuestros clientes calidad; a nuestros
+      proveedores credibilidad y a nuestros empleados estabilidad laboral.
+    </p>
+  </div>
+</div>
+
+<div id="historiaModal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('historiaModal')">&times;</span>
+    <h2>Reseña Histórica</h2>
+    <p>
+      Nacimos en el año 2017 en la ciudad de Santiago de Cali, para brindar una solución a nuestros
+      clientes en la prestación de servicios de aseo, y personal que quiera comenzar una vida laboral
+      con calidad y experiencia como respuesta al desempleo y la discriminación laboral. Nos hemos
+      convertido en expertos en nuestros servicios, con vocación social y visión de empresa, prestando
+      servicios de aseo con calidad, cumplimiento y costos acordes a la realidad económica del país.
+    </p>
+  </div>
+</div>
+
+<div id="recursosModal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('recursosModal')">&times;</span>
+    <h2>Recursos Humanos</h2>
+    <p>
+      Contamos con un equipo administrativo profesional que, apoyado en personal operativo idóneo
+      debidamente seleccionado y capacitado en la aplicación de productos y la utilización de
+      maquinaria para el aseo, garantiza la excelencia de la prestación y la excelencia de sus
+      instalaciones.
+    </p>
+  </div>
+</div>
+
+<div id="valorModal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('valorModal')">&times;</span>
+    <h2>Valor Agregado</h2>
+    <ul>
+      <li>Servicio de máquinas: hidrolavadora, brilladoras, polichadoras, guadañas, cortaseto.</li>
+      <li>Lavado de torres, pasillos y paredes exteriores cada 6 meses.</li>
+      <li>Encerado y brillado de pasillos de apartamentos cada 6 meses.</li>
+      <li>Corte de prados y suigla.</li>
+      <li>Lavado de parqueaderos con hidrolavadora cada 6 meses.</li>
+      <li>Sellado de pisos en zonas exteriores.</li>
+      <li>Señalización de parqueaderos.</li>
+      <li>Mantenimiento de piscinas en días festivos.</li>
+    </ul>
+  </div>
+</div>
+
+<div id="adicionalesModal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('adicionalesModal')">&times;</span>
+    <h2>Servicios Adicionales</h2>
+    <ul>
+      <li>Control y fumigación de plagas.</li>
+      <li>Destape de sifones con máquina de presión.</li>
+      <li>Lavado de muebles y desmanchado de alfombras.</li>
+      <li>Lavado de tanques de almacenamiento de agua.</li>
+    </ul>
+  </div>
+</div>
+
+<div id="contactoModal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('contactoModal')">&times;</span>
+    <h2>Contáctanos</h2>
+    <p>Email: soinprosascali@gmail.com</p>
+    <p>Celular: 315 777 8314</p>
+  </div>
+</div>
+
+<script>
+  function openModal(id) {
+    document.getElementById(id).style.display = "block";
+  }
+  function closeModal(id) {
+    document.getElementById(id).style.display = "none";
+  }
+  window.onclick = function(event) {
+    const modals = document.getElementsByClassName("modal");
+    for (let i = 0; i < modals.length; i++) {
+      if (event.target == modals[i]) {
+        modals[i].style.display = "none";
+      }
+    }
+  }
+</script>
+
+    <!-- Secciones -->
+    <h2 class="titulo-seccion">JARDINERÍA</h2>
+    <div class="contenedor-video">
+      <video autoplay muted loop controls>
+        <source src="jardineria vid-5.mp4" type="video/mp4">
+        Tu navegador no soporta video.
+      </video>
+    </div>
+    <div class="galeria">
+      <img src="jardineria-3.jpeg" alt="Imagen izquierda">
+      <img src="Jardineria-2.jpeg" alt="Imagen centro">
+      <img src="jardineria-4.jpeg" alt="Imagen derecha">
+    </div>
+
+    <h2 class="titulo-seccion">PISCINA</h2>
+    <div class="contenedor-video">
+      <video autoplay muted loop controls>
+        <source src="piscina vid-4.mp4" type="video/mp4">
+        Tu navegador no soporta video.
+      </video>
+    </div>
+    <div class="galeria">
+      <img src="piscina-1.jpeg" alt="Imagen izquierda">
+      <img src="piscina-2.jpeg" alt="Imagen centro">
+      <img src="piscina-3.jpeg" alt="Imagen derecha">
+    </div>
+
+    <h2 class="titulo-seccion">OPERARIOS</h2>
+    <div class="contenedor-video">
+      <video autoplay muted loop controls>
+        <source src="operarios" type="video/mp4">
+        Tu navegador no soporta video.
+      </video>
+    </div>
+    <div class="galeria">
+      <img src="operadores.jpeg" alt="Imagen izquierda">
+      <img src="operarios-2.jpeg" alt="Imagen centro">
+      <img src="operarios-3.jpeg" alt="Imagen derecha">
+    </div>
+
+    <footer>
+      <p>© 2025 SOLUCIONES INTEGRALES A LA PROPIEDAD S.A.S - Todos los derechos reservados</p>
+    </footer>
+  </div>
+
+  <script>
+    // Botón de bienvenida
+    document.getElementById("btnMenu").addEventListener("click", function() {
+      document.getElementById("bienvenida").style.display = "none";
+      const contenido = document.getElementById("contenido");
+      contenido.classList.add("mostrar");
+    });
+
+    // Funciones de modales
+    function openModal(id) {
+      document.getElementById(id).style.display = "block";
+    }
+    function closeModal(id) {
+      document.getElementById(id).style.display = "none";
+    }
+    window.onclick = function(event) {
+      const modals = document.getElementsByClassName("modal");
+      for (let i = 0; i < modals.length; i++) {
+        if (event.target == modals[i]) {
+          modals[i].style.display = "none";
+        }
+      }
+    }
+  </script>
+</body>
+</html>

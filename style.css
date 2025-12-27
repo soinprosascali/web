@@ -1,0 +1,151 @@
+body {
+  font-family: 'Times New Roman', Times, serif;
+  margin: 0;
+  background-color: #abbeff;
+  line-height: 1.6;
+}
+
+header {
+  background-color: #ffffff; /* azul corporativo */
+  color: rgb(0, 0, 0);
+  padding: 20px;
+  text-align: center;
+}
+
+.logo-titulo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.logo-titulo img {
+  height: 80px;
+}
+
+nav {
+  margin-top: 15px;
+}
+
+nav a {
+  margin: 0 15px;
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+footer {
+  background-color: #333;
+  color: rgb(255, 255, 255);
+  text-align: center;
+  padding: 15px;
+}
+
+/* Estilos para modales */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0; top: 0;
+  width: 100%; height: 100%;
+  background-color: rgba(0,0,0,0.7); /* fondo oscuro */
+}
+
+.modal-content {
+  background: #fff;
+  margin: 5% auto;
+  padding: 40px;
+  border-radius: 12px;
+  width: 80%;
+  max-width: 900px;
+  font-family: 'Times New Roman', serif;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+  animation: fadeIn 0.4s ease-in-out;
+  text-align: justify;
+}
+
+.close {
+  float: right;
+  font-size: 28px;
+  cursor: pointer;
+  color: #555;
+}
+
+.close:hover {
+  color: #000;
+}
+
+@keyframes fadeIn {
+  from {opacity: 0; transform: scale(0.95);}
+  to {opacity: 1; transform: scale(1);}
+}
+
+/* SECCIONES */
+.titulo-seccion {
+  text-align: center;
+  font-size: 2.5em;
+  margin: 30px 0 20px 0;
+  font-family: 'Times New Roman', serif;
+  color: #0b1a40;
+}
+
+/* VIDEO */
+.contenedor-video {
+  max-width: 900px;
+  margin: 30px auto;
+  text-align: center;
+}
+
+.contenedor-video video {
+  max-width: 100%;
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+
+/* GALERÍA */
+.galeria {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 30px auto;
+  max-width: 1000px;
+}
+
+.galeria img {
+  width: 30%;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+/* GALERÍA PISCINAS */
+.galeria-piscinas {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 20px auto;
+  max-width: 1000px;
+}
+
+.galeria-piscinas img {
+  width: 30%;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.texto-piscinas {
+  max-width: 900px;
+  margin: 20px auto;
+  text-align: justify;
+  font-family: 'Times New Roman', serif;
+  line-height: 1.6;
+}
+
+/* IMAGEN BANNER */
+.imagen-banner {
+  width: 25%;
+  margin: 20px auto;
+  display: block;
+  border-radius: 10px;
+}
